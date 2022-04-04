@@ -86,11 +86,44 @@ Body: User Stories
 
 ### 20.1.6: Create the Nav Component
 
+### 20.1.: Reflection
+
+Completed:
+
+-   Created components that form a section of elements in the UI.
+-   Learned how components are basically just functions.
+-   Used JSX as a shorthand for creating elements.
+-   Traced errors using React's error log.
+
+Learned:
+
+-   React is a js library for building reusable UI components
+    -   components = functions that can take input and determine appearance of a section of the UI.
+-   React creates a virtual DOM
+    -   virtual DOM allows react to create a declarative UI, later resolved by ReactDOM to sync with actual DOM, meaning only components that changed need to be re-rendered.
+
 ## Lesson 2: Run Unit Tests Using the React Testing Library
 
 ### 20.2.1: Introduction
 
+**unit testing** = a software development process in which the smallest testable parts of an application, called units, are individually and independently inspected for proper operation.
+
+**React components** functions that can be passed into or returned from other functions
+
+Goals:
+
+-   Develop maintainable tests for a React component.
+-   Formulate snapshots to compare the DOM node structures.
+-   Query elements to verify visibility, content, and accessibility.
+-   Explain the testing principles of the React Testing Library.
+
 ### 20.2.2: Preview
+
+Steps:
+
+1. Set Up the Testing Environment
+1. Create the About Component Tests
+1. Create the Nav Component Tests
 
 ### 20.2.3: Set Up the Testing Environment
 
