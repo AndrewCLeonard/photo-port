@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "./components/Nav";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
@@ -18,14 +18,16 @@ function App() {
 
 	return (
 		<div>
-			<nav //
+			<Nav //
 				categories={categories}
 				setCurrentCategory={setCurrentCategory}
 				currentCategory={currentCategory} //
-			></nav>
+			></Nav>
 			<main>
-				<Gallery />
-				<About />
+				<div>
+					<Gallery />
+					<About />
+				</div>
 			</main>
 		</div>
 	);
