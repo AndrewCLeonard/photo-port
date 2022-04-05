@@ -127,9 +127,52 @@ Steps:
 
 ### 20.2.3: Set Up the Testing Environment
 
+`npm install @testing-library/react @testing-library/jest-dom --save-dev`
+
+| package                   | description                                                                                                                        |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| @testing-library/react    | functions to help test React components, including capacity to render components and query functions that can return DOM elements. |
+| @testing-library/jest-dom | extends Jest with custom matchers to enable inspection of various parts of the DOM.                                                |
+
 ### 20.2.4: Create the About Component Tests
 
+`import { render, cleanup } from '@testing-library/react`
+
+`render` the component
+`cleanup` remove components from the DOM to prevent
+
+-   memory leaking
+-   variable or data collisions between tests that could corrupt test results
+
+#### Import the jest-dom Package
+
+`import "@testing-library/jest-dom/extend-expect";` offers access to custom matchers to test DOM elements
+https://github.com/testing-library/jest-dom
+
+#### Import the About Component
+
+#### Configure the Testing Environment
+
+#### Create a Baseline Test
+
+#### Run the Baseline Test
+
+#### Create a Test to Compare Snapshots of the DOM
+**snapshot** = a serialized version of the DOM node structure, enabled by Jest.
+
+the underlying principle of our testing strategy is to create tests that closely resemble user interaction.
+
 ### 20.2.5: Create the Nav Component Tests
+#### Create the Test File
+1. In the components directory, navigate to the Nav folder.
+1. In the Nav folder, create a __tests__ folder.
+1. In the __tests__ folder, create a test file named index.test.js.
+
+#### Import the Nav Component
+
+#### Create a Test for Link Visibility
+
+
 
 ### 20.2.6: Reflection
 
