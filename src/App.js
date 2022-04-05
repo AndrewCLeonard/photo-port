@@ -18,16 +18,10 @@ function App() {
 
 	return (
 		<div>
-			<Nav //
-				categories={categories}
-				setCurrentCategory={setCurrentCategory}
-				currentCategory={currentCategory} //
-			></Nav>
+			<Nav categories={categories} setCurrentCategory={setCurrentCategory} currentCategory={currentCategory}></Nav>
 			<main>
-				<div>
-					<Gallery />
-					<About />
-				</div>
+				<Gallery currentCategory={currentCategory}></Gallery>
+				<About></About>
 			</main>
 		</div>
 	);
