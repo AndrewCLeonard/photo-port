@@ -32,8 +32,10 @@ describe("Nav component", () => {
 	describe("links are visible", () => {
 		it("inserts text into the links", () => {
 			// Arrange
-			const { getByTestID } = render(<Nav />);
+			const { getByTestId } = render(<Nav />);
 			// Assert
+			expect(getByTestId("link")).toHaveTextContent("Oh Snap!");
+			expect(getByTestId("about")).toHaveTextContent("About me");
 		});
 	});
 });

@@ -158,29 +158,46 @@ https://github.com/testing-library/jest-dom
 #### Run the Baseline Test
 
 #### Create a Test to Compare Snapshots of the DOM
+
 **snapshot** = a serialized version of the DOM node structure, enabled by Jest.
 
 the underlying principle of our testing strategy is to create tests that closely resemble user interaction.
 
 ### 20.2.5: Create the Nav Component Tests
+
 #### Create the Test File
+
 1. In the components directory, navigate to the Nav folder.
-1. In the Nav folder, create a __tests__ folder.
-1. In the __tests__ folder, create a test file named index.test.js.
+1. In the Nav folder, create a **tests** folder.
+1. In the **tests** folder, create a test file named index.test.js.
 
 #### Import the Nav Component
 
 #### Create a Test for Link Visibility
 
-
-
 ### 20.2.6: Reflection
+
+-   Summarize the testing principles of the React Testing Library.
+-   Develop a test suite for a React component.
+-   Formulate snapshot tests that inspect the DOM node structure.
+-   Query elements to test visibility, text content, and accessibility.
 
 ## Lesson 3: Add Conditional Rendering to the Gallery
 
 ### 20.3.1: Introduction
 
+Be able to:
+
+-   Use conditional rendering to display each page.
+-   Introduce the concept of React Hooks.
+-   Manage application state in React.
+
 ### 20.3.2: Preview
+
+1. Create the Gallery Component
+1. Conditionally Render Gallery Pages
+1. Display the Photos
+1. Test the Gallery
 
 ### 20.3.3: Create the Gallery Component
 
