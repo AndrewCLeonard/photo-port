@@ -1,22 +1,24 @@
+// __tests__/Gallery.test.js
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-
-// component for testing
-import About from "..";
+import Gallery from "..";
+const portrait = { name: "portraits", description: "Portraits of people in my life" };
 
 afterEach(cleanup);
 
-describe("About component", () => {
-	// Baseline Test
+describe("Gallery is rendering", () => {
 	it("renders", () => {
-		render(<About />);
+		render(<Gallery currentCategory={portrait} />);
 	});
 
-	// Snapshot Test
-	it("matches snapshot DOM node structure", () => {
-		// render About
-		const { asFragment } = render(<About />);
+	it("renders", () => {
+		const { asFragment } = render(<Gallery currentCategory={portrait} />);
 		expect(asFragment()).toMatchSnapshot();
 	});
+});
+
+it("renders", () => {
+	const { getByTestId } = render(<Gallery currentCategory={portrait} />);
+	expect(getByTestId("h1tag")).toHaveTextContent("Portraits");
 });
