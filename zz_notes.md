@@ -229,19 +229,59 @@ function Child(props) {
 }
 ```
 
+##### Lifting State
 
+When state needs to be used in multiple sibling components, you'll probably lift state up until it can be passed as props to any child components that need it.
+
+-   `Gallery` isn't a child of `Nav`, so you can't pass props from `Nav` to `Gallery`.
+-   Pass `currentCategory` and its setter through to `Nav`.
+-   Move `categories` up
+
+#### Use useEffect to Change the DOM
+
+**`useEffect`** is a Hook that has an API that reflects the lifecycle methods of the component (mounts, unmounts, updates)
+
+```
+useEffect(() => {
+    document.title = capitalizeFirstLetter(currentCategory.name); // argument 1: callback function
+  }, [currentCategory]); // argument 2: array with single element, directs hook to re-render the component on changes to the value of this state.
+```
 
 ### 20.3.5: Display the Photos
 
+I don't understand the part of the [module](https://courses.bootcampspot.com/courses/951/pages/20-dot-3-5-display-the-photos?module_item_id=334942) where it says:
+"In PhotoList, the props.category value has been passed down from Gallery as currentCategory.name.
+
+Alternatively, we can destructure props, as seen in the following code:"
+
 ### 20.3.6: Test the Gallery
 
+#### Fix the Nav Tests
+
+-   `useEffect` and `useState` are both functions from `react`.
+-   Props can only be passed down from the parent component. React is bound by uni-direction data flow due to one-way bindings. This system is less error-prone and easier to debug because you know what is coming from where.
+
 ### 20.3.7: Reflection
+
+-   You used conditional rendering to display each page.
+-   You learned how to work with a couple of the most essential React Hooks.
+-   You managed application state in React.
 
 ## Lesson 4: Add a Contact Form
 
 ### 20.4.1: Introduction
 
+-   Create forms in React.
+-   Develop a controlled component by using state.
+-   Demonstrate conditional rendering to produce a single-page application (SPA).
+
 ### 20.4.2: Preview
+
+1. Create a Contact Form component
+2. Control state with a controlled component
+3. Validate the form data
+4. Add conditional rendering
+5. Test the component.
 
 ### 20.4.3: Create a Contact Form Component
 
