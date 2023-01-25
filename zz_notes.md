@@ -287,6 +287,19 @@ Alternatively, we can destructure props, as seen in the following code:"
 
 ### 20.4.4: Control State with a Controlled Component
 
+submitting forms in HTML
+
+-   event handlers listen for click event to retrieve the input values from the DOM
+-   data submitted to a db
+-   forms have an internal state = `useState` Hook to maintain form data with state
+
+**controlled** component = data maintained by state of the component
+**uncontrolled** component = data is retrieved then submitted directly from the DOM
+
+#### Initialize the State
+
+#### Sync the State
+
 ### 20.4.5: Validate the Form Data
 
 ### 20.4.6: Add Conditional Rendering
