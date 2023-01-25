@@ -177,13 +177,59 @@ The cleanup function is used to remove components from the DOM to prevent memory
 
 #### Using React Hooks
 
+[docs](https://reactjs.org/docs/hooks-overview.html)
 **React Hooks** manage state within a component.
 
 -   only call Hooks from React functions
 -   Only call Hooks at the top level. Don't use them inside `for` loops, nested functions, or conditionals
 -   components are functions
 
+```
+import React, { useState } from "react" // destructuring import
+
+function SomeComponent() {
+  // `useState()` function always returns an array
+  const [seconds, setSeconds] = useState(0) // item 1: value of the state. item 2: a `setter` which allows you to set state to something else. `0` is initial state
+
+  function startStopwatch() {
+    let updatedSeconds = seconds; // `setSeconds` is asynchronous, so `updatedSeconds keeps track of seconds in real time.
+    setInterval(() => {
+      updatedSeconds += 1;
+      console.log(updatedSeconds);
+      setSeconds(updatedSeconds); //  need to use `setSeconds`method, passing updated state as an argument to trigger re-render
+    }, 1000);
+  }
+
+return (
+  <div>
+    {seconds}
+    <button onClick={startStopwatch} >Start</button>
+  </div>
+)
+}
+```
+
 #### Add Conditional Rendering to the Nav Component
+
+if `currentCategory.name === category.name` then it will add the `navActive` class
+
+```
+<li className={`mx-1 ${currentCategory.name === category.name}`} key={category.name}>
+```
+
+This will render a `<div>` that says "Lyza!" Components are functions, so you can pass them arguments as attributes on the component in JSX.
+
+```
+function App() {
+  return <Child somename="Lyza" ></Child>
+}
+
+function Child(props) {
+  return <div>{props.somename}</div>
+}
+```
+
+
 
 ### 20.3.5: Display the Photos
 
