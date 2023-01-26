@@ -298,7 +298,22 @@ submitting forms in HTML
 
 #### Initialize the State
 
+`src/components/Contact/index.js`
+
+-   destructure `formState` object into its named properties.
+
 #### Sync the State
+
+sync state of component `formState` with user inputs.
+
+??
+
+-   I don't understand `setFormState`
+    I don't understand `setFormState({...formState, [e.target.name]: e.target.value })`
+
+#### Submit the Form Data
+
+`<form id='contact-form' onSubmit={handleSubmit}>`
 
 ### 20.4.5: Validate the Form Data
 
