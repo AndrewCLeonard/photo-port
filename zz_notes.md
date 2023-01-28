@@ -295,6 +295,10 @@ Alternatively, we can destructure props, as seen in the following code:"
 -   Develop a controlled component by using state.
 -   Demonstrate conditional rendering to produce a single-page application (SPA).
 
+-   Use conditional rendering to display each component.
+-   Use conditional styling to enhance the user experience.
+-   Manage the application state.
+
 ---
 
 ### 20.4.2: Preview
@@ -319,8 +323,11 @@ submitting forms in HTML
 -   data submitted to a db
 -   forms have an internal state = `useState` Hook to maintain form data with state
 
-**controlled** component = data maintained by state of the component
-**uncontrolled** component = data is retrieved then submitted directly from the DOM
+**controlled** component =
+
+-   data maintained by state of the component
+-   validation is possible in the component because field data is contained in the state
+    **uncontrolled** component = data is retrieved then submitted directly from the DOM
 
 #### Initialize the State
 
@@ -370,13 +377,26 @@ quality tests:
 #### Modify the Value on User Selection
 
 #### Add Conditional Styling
+
+---
+
 ### 20.4.7: Test the Component
 
 ### 20.4.8: Reflection
 
 ## Lesson 5: Add a Photo Modal
 
+-   Apply the useState Hook to conditionally render.
+-   Manage the state of a modal.
+-   Deploy to GitHub Pages.
+
 ### 20.5.1: Introduction
+
+1. Create the modal.
+1. Manage the modal’s state.
+1. Close the modal.
+1. Implement the modal tests.
+1. Deploy the website.
 
 ### 20.5.2: Preview
 
