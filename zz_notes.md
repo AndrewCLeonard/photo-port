@@ -149,10 +149,14 @@ The render function will do just what its name implies: "render" the component. 
 
 The cleanup function is used to remove components from the DOM to prevent memory leaking, as well as variable or data collisions between tests that could corrupt test results.
 
+---
+
 ### 20.2.5: Create the Nav Component Tests
 
 -   use `data-testid` attributes
 -   the `@testing-library/jest-dom` package because includes jest matchers that allow assertions specific to the DOM, such as `toHaveTextContent`.
+
+---
 
 ### 20.2.6: Reflection
 
@@ -162,7 +166,11 @@ The cleanup function is used to remove components from the DOM to prevent memory
 -   Introduce the concept of React Hooks.
 -   Manage application state in React.
 
+---
+
 ### 20.3.1: Introduction
+
+---
 
 ### 20.3.2: Preview
 
@@ -171,7 +179,11 @@ The cleanup function is used to remove components from the DOM to prevent memory
 3. Display the photos.
 4. Test the Gallery component.
 
+---
+
 ### 20.3.3: Create the Gallery Component
+
+---
 
 ### 20.3.4: Conditionally Render Gallery Pages
 
@@ -247,6 +259,8 @@ useEffect(() => {
   }, [currentCategory]); // argument 2: array with single element, directs hook to re-render the component on changes to the value of this state.
 ```
 
+---
+
 ### 20.3.5: Display the Photos
 
 I don't understand the part of the [module](https://courses.bootcampspot.com/courses/951/pages/20-dot-3-5-display-the-photos?module_item_id=334942) where it says:
@@ -254,12 +268,16 @@ I don't understand the part of the [module](https://courses.bootcampspot.com/cou
 
 Alternatively, we can destructure props, as seen in the following code:"
 
+---
+
 ### 20.3.6: Test the Gallery
 
 #### Fix the Nav Tests
 
 -   `useEffect` and `useState` are both functions from `react`.
 -   Props can only be passed down from the parent component. React is bound by uni-direction data flow due to one-way bindings. This system is less error-prone and easier to debug because you know what is coming from where.
+
+---
 
 ### 20.3.7: Reflection
 
@@ -269,11 +287,15 @@ Alternatively, we can destructure props, as seen in the following code:"
 
 ## Lesson 4: Add a Contact Form
 
+---
+
 ### 20.4.1: Introduction
 
 -   Create forms in React.
 -   Develop a controlled component by using state.
 -   Demonstrate conditional rendering to produce a single-page application (SPA).
+
+---
 
 ### 20.4.2: Preview
 
@@ -283,7 +305,11 @@ Alternatively, we can destructure props, as seen in the following code:"
 4. Add conditional rendering
 5. Test the component.
 
+---
+
 ### 20.4.3: Create a Contact Form Component
+
+---
 
 ### 20.4.4: Control State with a Controlled Component
 
@@ -311,14 +337,39 @@ sync state of component `formState` with user inputs.
 -   I don't understand `setFormState`
     I don't understand `setFormState({...formState, [e.target.name]: e.target.value })`
 
+?? [object initializer on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)
+
 #### Submit the Form Data
 
+add to `form` tag in `return` section:
 `<form id='contact-form' onSubmit={handleSubmit}>`
+
+---
 
 ### 20.4.5: Validate the Form Data
 
+quality tests:
+
+-   email must have valid format
+-   name and message fields must not be blank
+
+?? [`RegExp.prototype.test()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
+
+---
+
 ### 20.4.6: Add Conditional Rendering
 
+`onBlur` attribute fires the event once user changes focus from that field
+
+#### Convert the App into an SPA
+
+---
+
+**Single-page application (SPA)** is a web app or website that interacts with browser by dynamically rewriting the current webpage, as opposed to default method of browser loading entirely new pages. Thsi allows for a more fluid UI because page doesn't have to be reloaded each time.
+
+#### Modify the Value on User Selection
+
+#### Add Conditional Styling
 ### 20.4.7: Test the Component
 
 ### 20.4.8: Reflection
