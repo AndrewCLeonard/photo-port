@@ -1,11 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Contact component renders renders 1`] = `
+exports[`Contact component renders renders Contact fragment 1`] = `
 <DocumentFragment>
   <section>
-    <h1
-      data-testid="h1tag"
-    >
+    <h1>
       Contact me
     </h1>
     <form

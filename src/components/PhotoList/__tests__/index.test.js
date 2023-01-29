@@ -7,11 +7,11 @@ import PhotoList from "../../PhotoList";
 afterEach(cleanup);
 
 describe("PhotoList is rendering", () => {
-	it("renders", () => {
+	it("renders PhotoList", () => {
 		render(<PhotoList />);
 	});
 
-	it("renders", () => {
+	it("renders PhotoList fragment", () => {
 		const { asFragment } = render(<PhotoList />);
 		expect(asFragment()).toMatchSnapshot();
 	});

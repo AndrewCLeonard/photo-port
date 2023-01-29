@@ -1,28 +1,24 @@
 // __tests__/Contact.test.js
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
+// `cleanup` no longer required https://kentcdodds.com/blog/common-mistakes-with-react-testing-library#using-cleanup
+import { render, screen } from "@testing-library/react";
+// import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom/";
 import Contact from "../../Contact";
-
-afterEach(cleanup);
 
 describe("Contact component renders", () => {
 	it("renders", () => {
 		render(<Contact />);
 	});
 
-	it("renders", () => {
+	it("renders Contact fragment", () => {
 		const { asFragment } = render(<Contact />);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });
 
-it("renders", () => {
-	const { getByTestId } = render(<Contact />);
-	expect(getByTestId("h1tag")).toHaveTextContent("Contact me");
-});
-
-it("renders", () => {
-	const { getByTestId } = render(<Contact />);
-	expect(getByTestId("button")).toHaveTextContent("Submit");
+it("renders Contact Me", () => {
+	render(<Contact />);
+	// screen.getByText(/Contact me/i);
+	screen.getByRole("heading", { name: /Contact me/i });
 });
