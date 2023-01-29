@@ -404,6 +404,14 @@ quality tests:
 
 ### 20.5.4: Manage the Modal's state
 
+?? why spread operator in `src/components/Modal/index.js`?
+
+```
+const toggleModal = (image, i) => {
+  setCurrentPhoto({...image, index: i});
+}
+```
+
 ### 20.5.5: Close the Modal
 
 ### 20.5.6: Implement the Modal Tests
