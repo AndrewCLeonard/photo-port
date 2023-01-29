@@ -22,3 +22,8 @@ it("renders Contact Me", () => {
 	// screen.getByText(/Contact me/i);
 	screen.getByRole("heading", { name: /Contact me/i });
 });
+
+it("renders button", () => {
+	render(<Contact />);
+	screen.getByRole("button", { name: /Submit/i });
+});

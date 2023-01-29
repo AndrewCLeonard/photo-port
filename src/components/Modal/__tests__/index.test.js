@@ -1,7 +1,7 @@
 /* eslint-disable testing-library/prefer-screen-queries */
 // __tests__/Nav.test.js with hard coded categories
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Modal from "..";
 
